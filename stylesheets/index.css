@@ -1,0 +1,69 @@
+.login {
+    font-family: Poppins;
+    background-color: #ACBCFF;
+    height: 100vh;
+    width: 100vw; 
+}
+
+.login .background-img {
+    height: 100vh;
+    background-size: cover;
+    object-fit: cover;
+    background-image: url("/");
+    background-position: 60%; 
+}
+
+.login .background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(174, 226, 255, 0.348); 
+}
+    
+.login .crystal_1 {
+    position: absolute;
+    right: -130px;
+    top: -100px;
+    height: 316px;
+    width: 309px;
+    border-radius: 50%;
+    background: linear-gradient(#B799FF, rgba(255, 255, 255, 0));
+    transform: rotate(-158deg);
+}
+    
+.login .crystal_2 {
+    position: absolute;
+    left: -130px;
+    bottom: -100px;
+    height: 316px;
+    width: 309px;
+    border-radius: 50%;
+    background: linear-gradient(#B799FF, rgba(255, 255, 255, 0)); 
+}
+    
+
+
+
+    
+/* Mobile responsive css */
+
+@media only screen and (max-width: 992px) {
+    .login {
+      min-height: 100vh !important;
+      height: 100% !important; 
+    } 
+      
+    .login .background {
+        height: 50vh !important; 
+    }
+      
+    .login .crystal_1 {
+        display: none !important; 
+    }
+      
+    .login .crystal_2 {
+        display: none !important; 
+    }
+}
