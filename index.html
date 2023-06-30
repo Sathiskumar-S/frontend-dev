@@ -20,6 +20,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+
+    <!-- javascript link -->
+    <script src="./js/jquery-1.12.1.min.js"></script>
+    <script src="./js/script.js"></script>
   </head>
   <body>
     <div class="dashboard"> <!-- dashboard-->     
@@ -32,7 +36,8 @@
             <div class="city">
                 <h4 style="margin-right:5px;"> <span class="material-icons-outlined" style="color:rgba(0, 53, 245, 0.723);margin-right:-6px;font-size: 15px;">
                     near_me
-                    </span>      New York,USA   &ensp;   07:19
+                    </span>      New York,USA   &ensp;   07:19  <p id="dateAndTime"></p>
+
                 </h4>
                 <p  style="margin-left:10px;">Today 28 sept   &ensp;   19:32 </p>
                 &nbsp;
@@ -121,272 +126,150 @@
                   <span class="material-symbols-outlined">sunny</span>
                   <p>30 <sup>o</sup></p> 
                   <div class = "vertical5">
-                                            
-                                            <div class="blueline" style="line-height:0%;
-                                            width: 10px;
-                                            border-top: 5px solid transparent;
-                                            border-left: 35px solid rgb(38, 172, 235);
-                                            height:18px;position:absolute;margin-top: 62px;"></div>
-                                        
-                                        </div> 
-                                         <p>36%</p>           
-                                        </div>
-                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
-                                    
-                                        <div class="points" >
-                                                <p>15:00 </p>   
-                                                <span class="material-symbols-outlined">wb_cloudy</span>
-                                                 <p>29*</p> 
-                                                 <div class = "vertical6">  
-                                                    <div class="blueline" style="line-height:0%;
-                                                    width: 10px;
-                                                    border-top: 37px solid transparent;
-                                                    border-right: 35px solid rgb(38, 172, 235);
-                                                    height:48px;position:absolute;margin-top: 32px;"></div>
-                                                 </div>    
-                                                 <p>29%</p>        
-                                                </div>
-
-
-                                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
-                                    
-                                        <div class="points" >
-                                                <p>16:00 </p>   
-                                                        <span class="material-symbols-outlined">wb_cloudy</span>
-                                                         <p>29*</p> 
-                                                         <div class = "vertical7">  
-                                                            <div class="blueline" style="line-height:0%;
-                                                            width: 10px;
-                                                            border-top: 32px solid transparent;
-                                                            border-left: 35px solid rgb(38, 172, 235);
-                                                            height:48px;position:absolute;margin-top: 32px;"></div>   
-                                                   
-
-
-
-                                                         </div>    
-                                                         <p>76%</p>        
-                                                        </div>
-
-                                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
-                                
-                                        <div class="points" >
-                                                                <p>17:00 </p>   
-                                                                <span class="material-symbols-outlined">sunny</span>
-                                                                 <p>30*</p> 
-                                                                 <div class = "vertical8">  </div>
-                                                                 <p>48%</p>            
-                                                                </div>
-                                                            </div>
-                                                        </div><!--secondrow -->
-                           
-                        
-                         </div><!--weatherreporthourssend-->
-                       
-                        &nbsp;
-                             <p style="font-size:large;margin-left: 20px;"> More details of today's weather</p>
-                           <!--todays weather-->
-                           <div class="todays_weather">
-                              <div class="todays"><!--todays1-->
-                                <div class="weathername">
-                                    <h1font-size: smaller;>Humidity</h1>
-
-                                    
-                                   
-                                <p style="margin:20px;margin-left:50px;">82% bad</p>
-                                <!--bluebox-->
-                                
+                    <div class="blueline" style="line-height:0%; width: 10px; border-top: 5px solid transparent; border-left: 35px solid rgb(38, 172, 235); height:18px; position:absolute; margin-top: 62px;"></div>
+                  </div> 
+                  <p>36%</p>           
+                </div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+                <div class="points" >
+                  <p>15:00 </p>   
+                  <span class="material-symbols-outlined">wb_cloudy</span>
+                  <p>29 <sup>o</sup></p> 
+                  <div class = "vertical6">  
+                    <div class="blueline" style="line-height:0%; width: 10px; border-top: 37px solid transparent; border-right: 35px solid rgb(38, 172, 235); height:48px; position:absolute; margin-top: 32px;"></div>
+                  </div>    
+                  <p>29%</p>        
+                </div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                 
+                <div class="points" >
+                  <p>16:00 </p>   
+                  <span class="material-symbols-outlined">wb_cloudy</span>
+                  <p>29 <sup>o</sup></p> 
+                  <div class = "vertical7">  
+                    <div class="blueline" style="line-height:0%; width: 10px; border-top: 32px solid transparent; border-left: 35px solid rgb(38, 172, 235); height:48px; position:absolute; margin-top: 32px;"></div>   
+                  </div>    
+                  <p>76%</p>        
+                </div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
+                <div class="points" >
+                  <p>17:00 </p>   
+                  <span class="material-symbols-outlined">sunny</span>
+                  <p>30 <sup>o</sup></p> 
+                  <div class = "vertical8">  
+                    <div class="blueline" style="line-height:0%; width: 10px; border-top: 28px solid transparent; border-left: 35px solid rgb(38, 172, 235); height:48px; position:absolute; margin-top: 32px;"></div>   
+                  </div>
+                  <p>70%</p>
+                </div>
+              </div>
+            </div><!--secondrow -->
+          </div><!--weatherreporthourssend-->&nbsp;
+          <p style="font-size:large;margin-left: 20px;"> More details of today's weather</p>
+          <!--todays weather-->
+          <div class="todays_weather">
+            <div class="todays"><!--todays1-->
+              <div class="weathername">
+                <h1 style="font-size: smaller;">Humidity</h1>
+                <p style="margin:20px;margin-left:50px;">82% bad</p>
+                <!--bluebox-->
                 <p class="good">&nbsp;&nbsp;good</p><p class="normal">&nbsp;&nbsp;normal</p><p class="bad">&nbsp;bad</p><div class="overall" style="margin:5px;margin-right:5px;"> 
-                    
-                                    <div class="in1 bar">
-                                    
-                                        
-                                    </div>
-                                    
-                                    <div class="in2 bar">
-                                    
-                                       
-                                    </div>
-                                  
-                                    <div class="in3 ">
-                                        
-                                    <div class="in3_1 ">
-                                    
-                                    </div>
-                                   
-                                    </div>
-                                    </div>
-                                    <!--bluebox-->
-                                    
-                                </div>
-                                
-                                <span class="material-symbols-outlined"  style = "color: rgb(38, 172, 235);">humidity_high</span>
-                    </div><!--todays1end-->
-                            <div class="todays"><!--todays2-->
-                                <div class="weathername">
-                                <h1font-size: smaller;>Wind</h1>
-
-                                <p style="margin:20px;margin-left:50px;">10 km/h</p>
-                      
-                               <!--bluebox-->
-                                
-                <p class="sec1">&nbsp;&nbsp;0</p><p class="sec2">&nbsp;&nbsp;5</p><p class="sec3">&nbsp;10</p><div class="overall" style="margin:5px;margin-right:5px;"> 
-                    
-                    <div class="in1 bar">
-                    
-                        
-                    </div>
-                    
-                    <div class="in2 bar">
-                    
-                       
-                    </div>
-                  
-                    <div class="in3 ">
-                        
-                    <div class="in3_1 ">
-                    
-                    </div>
-                   
-                    </div>
-                    </div>
-                    <!--bluebox-->       
-                            </div>
-                            <span class="material-symbols-outlined "style="color: rgb(38, 172, 235);">air</span>    
-
-                    </div><!--todays2end-->
-
-                            <div class="todays"><!--todays3-->
-                                <div class="weathername">
-                                <h1font-size: smaller; >Precipitation</h1>
-
-                                <p style="margin:20px;margin-left:50px;">2.3 cm</p>
-
-                               
-                            <!--bluebox-->
-                                
-                <p class="the1">&nbsp;&nbsp;0</p><p class="the2">&nbsp;&nbsp;10</p><p class="the3">&nbsp;20</p><div class="overall" style="margin:5px;margin-right:5px;"> 
-                    
-                    <div class="in1 bar">
-                    
-                        
-                    </div>
-                    
-                    <div class="in2 bar">
-                    
-                       
-                    </div>
-                  
-                    <div class="in3 ">
-                        
-                    <div class="in3_1 ">
-                    
-                    </div>
-                   
-                    </div>
-                    </div>
-                    <!--bluebox-->                  
-                                    </div>
-                                    <span class="material-symbols-outlined" style="color: rgb(38, 172, 235);">weather_snowy</span>                            
-
-                        </div><!--todays3end-->
-                            <div class="todays"><!--todays4-->
-                                <div class="weathername">
-                                <h1font-size: smaller; >UV index</h1>
-                                <p style="margin:20px;margin-left:50px;">7 medium</p>
-                           
-                           <!--bluebox-->
-                                
-                <p class="fou1">&nbsp;&nbsp;0-2</p><p class="fou2">&nbsp;&nbsp;3-5</p><p class="fou3">&nbsp;6-7</p><div class="overall" style="margin:5px;margin-right:5px;"> 
-                    
-                    <div class="in1 bar">
-                    
-                        
-                    </div>
-                    
-                    <div class="in2 bar">
-                    
-                       
-                    </div>
-                  
-                    <div class="in3 ">
-                        
-                    <div class="in3_1 ">
-                    
-                    </div>
-                   
-                    </div>
-                    </div>
-                    <!--bluebox-->
-      
-                            </div>
-                                <span class="material-symbols-outlined" style="color: rgb(38, 172, 235);">light_mode</span>                            
-                            </div><!--todays4end-->
-
-                            <div class="todays"><!--todays5-->
-                                <div class="weathername">
-                                <h1font-size: smaller; >Feels like</h1>
-                                <p style="margin:20px;margin-left:50px;">40(deg)</p>
-
-                                <!--bluebox-->
-                                
-                <p class="fiv1">&nbsp;&nbsp;0*</p><p class="fiv2">&nbsp;&nbsp;25*</p><p class="fiv3">&nbsp;50*</p><div class="overall" style="margin:5px;margin-right:5px;"> 
-                    
-                    <div class="in1 bar">
-                    
-                        
-                    </div>
-                    
-                    <div class="in2 bar">
-                    
-                       
-                    </div>
-                  
-                    <div class="in3 ">
-                        
-                    <div class="in3_1 ">
-                    
-                    </div>
-                   
-                    </div>
-                    </div>
-                    <!--bluebox-->
-      
-                            </div>
-                                <span class="material-symbols-outlined" style="color: rgb(38, 172, 235);">device_thermostat</span>                            
-                            </div><!--todays5end-->
-                            
-                            <div class="todays"><!--todays6-->
-                                <div class="weathername">
-                                <h1font-size: smaller;>Chance of rain</h1>
-                                <p style="margin:20px;margin-left:50px;">50%</p>
-
-                  <!--bluebox-->
-                                
-                <p class="six1">&nbsp;&nbsp;0%</p><p class="six2">&nbsp;&nbsp;25%</p><p class="six3">&nbsp;50%</p><div class="overall" style="margin:5px;margin-right:5px;"> 
-                    
-                                    <div class="in1 bar">
-   
-                                    </div>
-                                    
-                                    <div class="in2 bar">
- 
-                                    </div>
-                                  
-                                    <div class="in3 ">
-                                        
-                                    <div class="in3_1 ">
-                                    
-                                    </div>
-                                    </div>
-                                    </div>
-                                    <!--bluebox-->
-                            </div>
-                                <span class="material-symbols-outlined" style="color: rgb(38, 172, 235);">rainy</span>                            
-                            </div><!--todays6end-->
-                         </div><!--todays weather end-->     
-        </section><!--main end-->
-    </div><!--dashboard end-->
+                <div class="in1 bar">
+                </div>
+                <div class="in2 bar">
+                </div>
+                <div class="in3 ">
+                  <div class="in3_1 ">
+                  </div>
+                </div>
+              </div>
+              <!--bluebox-->
+            </div>
+            <span class="material-symbols-outlined"  style = "color: rgb(38, 172, 235);">humidity_high</span>
+          </div><!--todays1end-->
+          <div class="todays"><!--todays2-->
+            <div class="weathername">
+              <h1 style="font-size: smaller;">Wind</h1>
+              <p style="margin:20px;margin-left:50px;">10 km/h</p>                                
+              <p class="sec1">&nbsp;&nbsp;0</p><p class="sec2">&nbsp;&nbsp;5</p><p class="sec3">&nbsp;10</p><div class="overall" style="margin:5px;margin-right:5px;"> 
+              <div class="in1 bar">
+              </div>
+              <div class="in2 bar">
+              </div>
+              <div class="in3 ">
+                <div class="in3_1 ">
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="material-symbols-outlined "style="color: rgb(38, 172, 235);">air</span>    
+        </div><!--todays2end-->
+        <div class="todays"><!--todays3-->
+          <div class="weathername">
+            <h1 style="font-size: smaller;" >Precipitation</h1>
+            <p style="margin:20px;margin-left:50px;">2.3 cm</p><!--bluebox-->
+            <p class="the1">&nbsp;&nbsp;0</p><p class="the2">&nbsp;&nbsp;10</p><p class="the3">&nbsp;20</p><div class="overall" style="margin:5px;margin-right:5px;"> 
+            <div class="in1 bar">
+            </div>
+            <div class="in2 bar">
+            </div>
+            <div class="in3 ">
+              <div class="in3_1 ">
+              </div>
+            </div>
+          </div><!--bluebox-->                  
+        </div>
+        <span class="material-symbols-outlined" style="color: rgb(38, 172, 235);">weather_snowy</span>                            
+      </div><!--todays3end-->
+      <div class="todays"><!--todays4-->
+        <div class="weathername">
+          <h1 style="font-size: smaller; ">UV index</h1>
+          <p style="margin:20px;margin-left:50px;">7 medium</p><!--bluebox-->                 
+          <p class="fou1">&nbsp;&nbsp;0-2</p><p class="fou2">&nbsp;&nbsp;3-5</p><p class="fou3">&nbsp;6-7</p><div class="overall" style="margin:5px;margin-right:5px;"> 
+          <div class="in1 bar">
+          </div>
+          <div class="in2 bar">
+          </div>
+          <div class="in3 ">
+            <div class="in3_1 ">
+            </div>
+          </div>
+        </div><!--bluebox-->
+      </div>
+      <span class="material-symbols-outlined" style="color: rgb(38, 172, 235);">light_mode</span>                            
+    </div><!--todays4end-->
+    <div class="todays"><!--todays5-->
+      <div class="weathername">
+        <h1 style="font-size: smaller;"></h1>Feels like</h1>
+        <p style="margin:20px;margin-left:50px;">40(deg)</p><!--bluebox-->                
+        <p class="fiv1">&nbsp;&nbsp;0*</p><p class="fiv2">&nbsp;&nbsp;25*</p><p class="fiv3">&nbsp;50*</p><div class="overall" style="margin:5px;margin-right:5px;"> 
+        <div class="in1 bar">
+        </div>
+        <div class="in2 bar">
+        </div>
+        <div class="in3 ">
+          <div class="in3_1 ">
+          </div>
+        </div>
+      </div><!--bluebox-->
+    </div>
+    <span class="material-symbols-outlined" style="color: rgb(38, 172, 235);">device_thermostat</span>                            
+  </div><!--todays5end-->
+  <div class="todays"><!--todays6-->
+    <div class="weathername">
+      <h1 style="font-size: smaller;">Chance of rain</h1>
+      <p style="margin:20px;margin-left:50px;">50%</p><!--bluebox-->
+      <p class="six1">&nbsp;&nbsp;0%</p><p class="six2">&nbsp;&nbsp;25%</p><p class="six3">&nbsp;50%</p><div class="overall" style="margin:5px;margin-right:5px;"> 
+      <div class="in1 bar">
+      </div>
+      <div class="in2 bar">
+      </div>
+      <div class="in3 ">
+        <div class="in3_1 ">
+      </div>
+    </div>
+  </div> <!--bluebox-->
+</div>
+<span class="material-symbols-outlined" style="color: rgb(38, 172, 235);">rainy</span>                            
+</div><!--todays6end-->
+</div><!--todays weather end-->     
+</section><!--main end-->
+</div><!--dashboard end-->
 </body>
 </html>
 
