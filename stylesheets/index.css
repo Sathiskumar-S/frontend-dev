@@ -1,174 +1,476 @@
+.material-icons-outlined{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+*{
+    box-sizing: border-box;
+    font-family:'montserrat';
+}
 body{
-  font-family: 'Xanh Mono', monospace;
-  margin: 0;
+    margin:0px;
+    background-color: rgb(148, 198, 242);
+    font-family: 'Xanh Mono', monospace;
 }
-
-.temp {
-    font-family: Poppins;
-    background-color: #FFEA20;
-    height: 100vh;
-    width: 100vw; 
-}
-
-.temp .background-img {
-    height: 100vh;
-    background-position: 60%; 
-}
-
-.temp .background-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(141, 203, 230);
-}
+.dashboard{
+    padding:0px 12px;
+    margin: 0;
+    justify-content: center;
     
-.temp .crystal_1 {
-    position: absolute;
-    right: -130px;
-    top: -100px;
-    height: 316px;
-    width: 309px;
-    border-radius: 50%;
-    background: linear-gradient(#B799FF, rgba(255, 255, 255,0.6));
-    transform: rotate(-158deg);
 }
+.main {
+border-radius: 30px;
+background-color: rgb(219, 240, 252);
+border-width: 35px;
+padding: 5px 10px;
+box-sizing: border-box;
+margin-bottom:0px;
+margin-top:0px;
+margin:10px 10px 0px 0px;
+margin-right: 0px;
+
+}
+/* ==navigation design==*/
+
+.dashboard .navigation{
+    background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-atmospheric-blue-weather-forecast-illustration-landscape-background-picture-image_1134642.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px 20px;
+    height:80.70em;
+   
     
-.temp .crystal_2 {
+    margin: 0px 0px 0px 0px;
+    margin-top: 20px;
+    border-radius: 20px;
+    
+}.dashboard .navigation .off{
+   display: flex;
+   
+   justify-content: space-between;
+ 
+}
+.dashboard .navigation  .city{
+   display: block;
+   font-size:larger; margin-top:100px;  ;
+   justify-content:center;
+   color:rgb(79, 30, 30);
+ 
+}
+
+/*navigaion end*/
+/* profile dashboard part start */
+ .dashboard .main  .title  {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+
+
+/* profile dashboard part end */
+
+ .dashboard .main .todays_weather .todays  {
+   display: flex;
+   justify-content: space-between;
+   
+
+
+}
+
+.dashboard .main .todays_weather .todays  {
+  padding: 20px 20px  20px 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 40px rgba( 0 0 0 / .01);
+  margin-left: 10px;
+  margin-bottom: 25px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+
+
+.dashboard .main .weatherreporthours  {
+   display: flex;
+   padding: 20px 20px  20px 20px;
+   background-color: #fff;
+
+
+   justify-content: space-between; 
+   border-radius: 30px;
+   margin-left: 4px;
+   margin:10px;
+   margin-right: 5px;
+
+
+  
+   
+}.dashboard .main .weatherreporthours .section1  {
+    display:flex;
+   
+    
     position: absolute;
-    left: -130px;
-    bottom: -100px;
-    height: 316px;
-    width: 309px;
-    border-radius: 50%;
-    background: linear-gradient(#B799FF, rgba(255, 255, 255,0.6)); 
-}
+
+   
+   
+   
+}.dashboard .main .weatherreporthours .rain  {
+  display: flex;
+  margin-right:70px;
+ 
   
-.weather-content{
-  padding: 25px;
-  display: table-cell;
-}
+}.dashboard .main .weatherreporthours .days  {
+  display: flex;
+  margin-right:180px;
 
-.weather-content>.add-icon{
-  float: left;
-  padding-right: 50px;
-  padding-left: 30px;
+  
+}.dashboard .main .weatherreporthours .rain .precipitation  {
+  display:flex;
+  background-color: rgba(229, 228, 228, 0.95) ;
+  padding: 2px 5px;
+  border-radius: 20px;
+  margin-left: 61px;
+  position:absolute;
+ 
+  
 }
-
-.weather-content>.threedot-icon{
-  float: left;
-  padding-left: 50px;
-  padding-right: 30px;
-}
-
-.weather-content>.toggle-switch{
-  float: left;
-  padding-left: 30px;
-}
-
-.loc-icon{
-  position: relative;
-  top: 35px;
-  right: 200px;
+.dashboard .main .weatherreporthours .days .next  {
+  display:flex;
+  background-color: rgba(229, 228, 228, 0.95) ;
+  padding: 2px 5px;
+  border-radius: 20px;
+  margin-left: 51px;
+  position: absolute;
 }
 
-.location{
-  position: relative;
-  left: 25px;
-  top: 10px;
-  color: white;
+.dashboard .main .weatherreporthours .secondrow .tempe{
+  display:flex;
+  flex-direction: row;
+margin-top: 30px;
+padding:10px;
+justify-content:space-around;
+font-size:smaller;
 }
-/* The switch - the box around the slider */
-.switch {
-    position: absolute;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
 
 
-.weather-info{
-    height: 300px;
-    width: 1100px;
-    background-color: #ffffff;
+/*vertical*/
+.dashboard .main .weatherreporthours .secondrow .points .vertical1 {
+        border-left: 1.5px solid grey;
+        height: 80px;
+        margin-left: 9px;
+       
+       
+   }
+   .dashboard .main .weatherreporthours .secondrow .points .vertical2 {
+        border-left: 1.5px solid grey;
+        height: 80px;
+        margin-left: 9px;
+       
+   }
+   .dashboard .main .weatherreporthours .secondrow .points .vertical3 {
+        border-left: 1.5px solid grey;
+        height: 80px;
+        margin-left: 9px;
+       
+   } .dashboard .main .weatherreporthours .secondrow .points .vertical4 {
+        border-left: 1.5px solid grey;
+        height: 80px;
+        margin-left: 9px;
+       
+   } .dashboard .main .weatherreporthours .secondrow .points .vertical5 {
+        border-left: 1.5px solid grey;
+        height: 80px;
+        margin-left: 9px;
+       
+   } .dashboard .main .weatherreporthours .secondrow .points .vertical6 {
+        border-left: 1.5px solid grey;
+        height: 80px;
+        margin-left: 9px;
+    
+       
+   } .dashboard .main .weatherreporthours .secondrow .points .vertical7 {
+        border-left: 1.5px solid grey;
+        height: 80px;
+        margin-left: 9px;
+       
+   } .dashboard .main .weatherreporthours .secondrow .points .vertical8 {
+        border-left: 1.5px solid grey;
+        
+        height: 80px;
+        margin-left: 9px;
+       
+   }
+    /*bluebarend*/
+    .overall  {
+    position:relative;
+      background-color: white;
+      height:15px;
+      width:145px;
+      margin-top:-0.5px;
+      font-family:'montserrat';
+      
+    }
+
+    .bar
+    {
+    position:absolute;
+    background-color:rgb(45, 178, 230);
+    height:10px;
+    width:50px;
+    top:1px;
+    
+    
     border-radius: 25px;
+    }
+    .in2
+    {
+    left:55px;
+   
+    
+    }
+    .in3
+    {
+    position:absolute;
+    background-color:lightgray;
+    height:10px;
+    width:40px;
+    top:1px;
+    margin:0px;
+   
+    right:-5px;
+    border-radius: 25px;
+    }
+    .in3_1
+    {
+    
+    background-color:rgb(45, 178, 230);
+    height:10px;
+    width:25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    }
+    .good {
+       margin:7px;
+       font-size: x-small;
+       color:gray;
+    }
+    .normal {
+       margin:0px;
+       margin-left: 60px;
+       font-size: x-small;
+       margin-top: -19px;
+       color:gray;
+    }
+    .bad {
+       margin:0px;
+       margin-left: 125px;
+       margin-top: -11px;
+       font-size: x-small;
+       color:gray;
+    }
+/* sec */
+    .sec1 {
+       margin:7px;
+       font-size: x-small;
+       color:gray;
+    }
+    .sec2 {
+       margin:0px;
+       margin-left: 60px;
+       font-size: x-small;
+       margin-top: -19px;
+       color:gray;
+    }
+    .sec3 {
+       margin:0px;
+       margin-left: 125px;
+       margin-top: -11px;
+       font-size: x-small;
+       color:gray;
+    }
+    /* sec */
+
+    /* the */
+    .the1 {
+       margin:7px;
+       font-size: x-small;
+       color:gray;
+    }
+    .the2 {
+       margin:0px;
+       margin-left: 60px;
+       font-size: x-small;
+       margin-top: -19px;
+       color:gray;
+    }
+    .the3 {
+       margin:0px;
+       margin-left: 125px;
+       margin-top: -11px;
+       font-size: x-small;
+       color:gray;
+    }
+    /* the */
+
+    /* fou */
+    .fou1 {
+       margin:7px;
+       font-size: x-small;
+       color:gray;
+    }
+    .fou2 {
+       margin:0px;
+       margin-left: 60px;
+       font-size: x-small;
+       margin-top: -19px;
+       color:gray;
+    }
+    .fou3 {
+       margin:0px;
+       margin-left: 125px;
+       margin-top: -11px;
+       font-size: x-small;
+       color:gray;
+    }
+    /* fou */
+     
+    /* fiv */
+    .fiv1 {
+       margin:7px;
+       font-size: x-small;
+       color:gray;
+    }
+    .fiv2 {
+       margin:0px;
+       margin-left: 60px;
+       font-size: x-small;
+       margin-top: -19px;
+       color:gray;
+    }
+    .fiv3 {
+       margin:0px;
+       margin-left: 125px;
+       margin-top: -11px;
+       font-size: x-small;
+       color:gray;
+    }
+    /* fiv */
+
+    /* six */
+    .six1 {
+       margin:7px;
+       font-size: x-small;
+       color:gray;
+    }
+    .six2 {
+       margin:0px;
+       margin-left: 60px;
+       font-size: x-small;
+       margin-top: -19px;
+       color:gray;
+    }
+    .six3 {
+       margin:0px;
+       margin-left: 125px;
+       margin-top: -11px;
+       font-size: x-small;
+       color:gray;
+    }
+
+
+/* Media query 768xp */
+
+
+
+/* Media query 768xp */
+@media only screen and (min-width:768px)  {
+    section.main .todays_weather {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+            section.main .todays_weather .todays{
+       width: 30%;
+     
+       margin-top: 30px;
+    } 
+
 }
 
+/* humid */
 
+
+
+/* Media query 768xp end*/
+/* Media query 375xp */
+
+@media only screen and (min-width: 375px) {
     
-/* Mobile responsive css */
+    .dashboard .main .weatherreporthours .rain  {
+  display: flex;
+  margin-right:130px;
+  margin-left:-60px;
+  
+}.dashboard .main .weatherreporthours .days  {
+  display: flex;
+  margin-right:180px;
 
-@media only screen and (max-width: 992px) {
-    .temp {
-      min-height: 100vh !important;
-      height: 100% !important; 
-    } 
-      
-    .temp .background {
-        height: 50vh !important; 
+
+}
+}
+
+/* Media query  375xp end */
+/* Media query 1024xp */
+@media only screen and (min-width: 1024px)  {
+     .dashboard .navigation 
+    {     
+        display:block;
+       
+
     }
-      
-    .temp .crystal_1 {
-        display: none !important; 
+    .dashboard .navigation {     
+        width:290px;
+        position:absolute;
+     
+        height: 59.70em;
+        
     }
-      
-    .temp .crystal_2 {
-        display: none !important; 
+    section.main{
+        margin-right: 20px;
+        margin-left: 250px;
+        margin-top: 20px;
+        position:absolute;
     }
+    .dashboard .main .weatherreporthours .secondrow .tempe{
+  display:flex;
+  flex-direction: row;
+margin-top: 30px;
+padding:10px;
+justify-content:center;
+font-size:medium;
+}
 }
