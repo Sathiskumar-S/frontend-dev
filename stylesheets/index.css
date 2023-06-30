@@ -31,7 +31,7 @@
 body{
     margin:0px;
     background-color: rgb(148, 198, 242);
-    font-family: 'Xanh Mono', monospace;
+    font-family: 'Xanh Mono', monospace !important;
 }
 .dashboard{
     padding:0px 12px;
